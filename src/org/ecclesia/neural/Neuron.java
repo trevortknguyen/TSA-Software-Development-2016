@@ -14,10 +14,6 @@ public class Neuron {
 	private float[] weights;
 	private float input;
 
-	public float[] getWeights() {
-		return weights;
-	}
-
 	/**
 	 * Initially generates a Random Neuron
 	 * 
@@ -85,5 +81,13 @@ public class Neuron {
 	float getSigmoidValue(float v) {
 		return (float) (Math.pow(Math.E, v) - (Math.pow(Math.E, -v)) / 
 				(Math.pow(Math.E, v) + Math.pow(Math.E, -v)));
+	}
+	
+	/**
+	 * Returns the weights array 
+	 * @return weights
+	 */
+	public float[] getWeights() {
+		return weights;
 	}
 }

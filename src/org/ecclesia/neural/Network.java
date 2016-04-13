@@ -54,7 +54,23 @@ public class Network {
 	 */
 	public float[] getOutput(float[] input) {
 		for (int i = 0; i < input.length; i++) {
-			
+			network[0][i].addInput(input[i]);
+		}
+		for (int i = 1; i < network.length - 1; i++) {
+			for (int n = 0; n < network[i].length; n++) {
+				float[] localOutput = network[i][n].getOutput();
+				for (int j = 0; j < localOutput.length; j++) {
+					network[i + 1][j].addInput(localOutput[j]);
+				}
+			}
+		}
+
+		float[] output = new float[network[network.length - 1][0].getWeights().length];
+		for (int i = 0; i < network[network.length - 1].length; i++) {
+			float[] localOutputs = network[network.length - 1][i].getOutput();
+			for (int n = 0; n < localOutputs.length; n++) {
+				output[n] += localOutputs[n];
+			}
 		}
 		return input;
 	}
