@@ -53,6 +53,9 @@ public class Network {
 	 * @return output
 	 */
 	public float[] getOutput(float[] input) {
+		for (int i = 0; i < input.length; i++) {
+			
+		}
 		return input;
 	}
 }
