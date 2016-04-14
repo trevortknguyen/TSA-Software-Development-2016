@@ -83,6 +83,14 @@ public class Neuron {
 	 * @return Sigmoid Value of v
 	 */
 	float getSigmoidValue(float v) {
-		return (float) (1 / (1 + Math.pow(Math.E, -v)));
+		 return (float) (1 / (1 + Math.pow(Math.E, -v)));
+		/**if(v < -1.5) 
+		{
+			return -1;
+		}else if(v > 1.5) {
+			return 1;
+		}
+		return 0;
+		**/
 	}
 }

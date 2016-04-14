@@ -17,7 +17,7 @@ public class Malish extends Animal {
 
 	final static int outputWidth = 3;
 	final static float heathDepletion = 0.001f;
-	final static float turnSpeed = (float) (Math.PI / 4);
+	final static float turnSpeed = (float) (Math.PI / 8);
 	final static float moveSpeed = 1f;
 	final static int vision = 100;
 	Network net;

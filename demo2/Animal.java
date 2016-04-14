@@ -18,9 +18,9 @@ public abstract class Animal extends Organism {
 		position.adjustAngle(theta);
 	}
 
-	public void move(float ammount) {
-		super.setX((float) (position.getX() + ammount * Math.cos(position.getAngle())));
-		super.setY((float) (position.getY() + ammount * Math.sin(position.getAngle())));
+	public void move(float amount) {
+		super.setX((float) (position.getX() + amount * Math.cos(position.getAngle())));
+		super.setY((float) (position.getY() + amount * Math.sin(position.getAngle())));
 
 	}
 
