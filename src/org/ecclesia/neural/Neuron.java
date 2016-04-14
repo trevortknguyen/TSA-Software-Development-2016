@@ -18,7 +18,7 @@ public class Neuron {
 		return weights;
 	}
 
-	/**
+	/**	
 	 * Initially generates a Random Neuron
 	 * 
 	 * @param width
